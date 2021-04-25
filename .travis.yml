@@ -22,6 +22,3 @@ after_success:
   - docker push mikeaws1/multi-nginx
   - docker push mikeaws1/multi-server
   - docker push mikeaws1/multi-worker
-
-
-
