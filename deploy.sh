@@ -8,5 +8,5 @@ ssh -o StrictHostKeyChecking=no travis@${DIGITAL_OCEAN_DROPLET_IP} << ENDSSH
   echo "Stopping all"
   docker stop $(docker ps -a -q)
   echo "Starting up container"
-  docker-compose up --build
+  docker-compose up --build -d
 ENDSSH
