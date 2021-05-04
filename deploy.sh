@@ -6,7 +6,7 @@ ssh -o StrictHostKeyChecking=no travis@${DIGITAL_OCEAN_DROPLET_IP} << ENDSSH
   echo $1 >> droplettest
   echo $1 | docker login --username mikeaws1 --password-stdin
   echo "Stopping all"
-  docker stop $(docker ps -a -q)
+  docker-compose down
   echo "Starting up container"
   docker-compose up --build -d
 ENDSSH
