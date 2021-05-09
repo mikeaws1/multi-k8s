@@ -33,6 +33,7 @@ pgClient.on('connect', () => {
     .catch((err) => console.log(err));
 });
 
+pgClient.connect();
 
 // Redis client setup
 
