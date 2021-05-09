@@ -25,15 +25,7 @@ const pgClient = new Pool({
     port: keys.pgPort
 });
 
-console.log("connecting to db!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-console.log(pgClient);
-console.log(keys.pgUser);
-console.log(keys.pgPort);
-console.log(keys.pgHost);
-console.log(keys.pgDatabase);
-console.log(keys.pgPassword);
-
-pgClient.on('error', () => console.log('Lost pg connection!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11'));
+pgClient.on('error', () => console.log('Lost pg connection!'));
 pgClient.on('connect', () => {
   console.log("Connecting and creating table!");
   pgClient
