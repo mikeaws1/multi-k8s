@@ -11,6 +11,9 @@ const redisClient = redis.createClient({
 const sub = redisClient.duplicate();
 
 
+console.log("Redis !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+console.log(keys.redisHost);
+console.log(keys.redisPort);
 function fib(index) {
     if (index == 0) {
         return 1;
