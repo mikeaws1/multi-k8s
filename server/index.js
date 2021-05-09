@@ -25,8 +25,9 @@ const pgClient = new Pool({
     port: keys.pgPort
 });
 
-pgClient.on('error', () => console.log('Lost pg connection'));
+pgClient.on('error', () => console.log('Lost pg connection!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11'));
 pgClient.on('connect', () => {
+  console.log("Connecting and creating table!");
   pgClient
     .query('CREATE TABLE IF NOT EXISTS values (number INT)')
     .catch((err) => console.log(err));
