@@ -14,7 +14,7 @@ before_install:
   - gcloud config set project multi-k8s-315815
   - gcloud config set compute/zone europe-central2-a
   - gcloud container clusters get-credentials multi-cluster
-  - echo ${DOCKER_PASSWORD} | docker login  -u ${DOCKER_USERNAME} --password-stdin
+  - echo $"DOCKER_PASSWORD" | docker login  -u $"DOCKER_USERNAME" --password-stdin
   - docker build -t mikeaws1/react-test -f ./client/Dockerfile.dev ./client
 
 script:
